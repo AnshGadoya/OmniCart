@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Colors = () => {
+function Colors() {
     return (
         <div>
             <div>
