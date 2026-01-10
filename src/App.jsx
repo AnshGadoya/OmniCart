@@ -1,8 +1,16 @@
 import React from 'react'
 
+import {Routes, Route} from "react-router-dom";
+import HomeScreen from "./pages/HomeScreen.jsx";
+
 const App = () => {
     return (
-        <div className='p-60 '>App3</div>
+        <>
+            <Routes>
+                <Route element={ <HomeScreen /> } path="/" />
+            </Routes>
+
+        </>
     )
 }
 export default App
