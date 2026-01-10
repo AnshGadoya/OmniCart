@@ -1,12 +1,14 @@
 import React from 'react'
-import ScrollTopBtn from "../components/ScrollTopBtn.jsx";
+import Footer from "../layout/Footer.jsx";
 
 function HomeScreen() {
     return (
-        <div>
-            fddthh
-            <ScrollTopBtn />
-        </div>
+        <>
+            <div>HomeScreen</div>
+             <ScrollTopBtn />
+        <Footer/>
+        </>
+
     )
 }
 
