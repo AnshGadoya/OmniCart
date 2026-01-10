@@ -2,7 +2,7 @@ import React from 'react'
 
 const App = () => {
     return (
-        <div className='p-60'>App3</div>
+        <div>App1</div>
     )
 }
 export default App
