@@ -1,12 +1,11 @@
-import React from 'react'
-import Footer from "../layout/Footer.jsx";
 
 function HomeScreen() {
     return (
         <>
-            <div>HomeScreen</div>
-             <ScrollTopBtn />
-        <Footer/>
+            <div className='text-9xl'>
+                lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+            </div>
+
         </>
 
     )

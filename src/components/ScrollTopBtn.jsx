@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function ScrollTopBtn() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
