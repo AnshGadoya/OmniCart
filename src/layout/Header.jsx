@@ -34,8 +34,8 @@ function Header() {
         {/* Logo */}
         <div>
           <h1
-            className='font-bold text-gray-800 transition-all duration-300
-              ${scrolled ? "text-2xl" : "text-3xl"}'
+            className={`font-bold text-gray-800 transition-all duration-300
+              ${scrolled ? "text-2xl" : "text-3xl"}`}
 
           >
             {AppString.APP_NAME}
