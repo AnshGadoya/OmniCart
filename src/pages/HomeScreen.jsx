@@ -1,6 +1,7 @@
 import WordBtn from "../components/WordBtn.jsx";
 import {useState} from "react";
 import Card from "../components/Card.jsx";
+import SlideShow from "../layout/SlideShow.jsx";
 
 function HomeScreen() {
 
@@ -26,15 +27,17 @@ function HomeScreen() {
 
     return (
         <>
+            <SlideShow/>
+
 
             <div>
 
                 <div className='justify-center text-4xl font-medium text-center p-8 flex gap-4'>
-                    <div className='h-1 w-1/14 border-2 mt-5'/>
+                    <div className='h-1 w-1/14 border-3 rounded mt-5'/>
                     <h1 className='text-3xl'>
                         Daily Deals
                     </h1>
-                    <div className='h-1 w-1/14 border-2 mt-5'/>
+                    <div className='h-1 w-1/14 border-3 rounded mt-5'/>
                 </div>
 
                 <div className='flex gap-18 p-1 justify-center'>

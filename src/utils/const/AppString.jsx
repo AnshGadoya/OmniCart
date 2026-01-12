@@ -19,7 +19,8 @@ const AppString  = {
     YOUTUBE: "YouTube",
     PRIVACY_POLICY: "Privacy Policy",
     TERMS_OF_SERVICE: "Terms of Service",
-    SUBSCRIBE_INFO:" Get E-mail updates about our latest shop and special offers."
+    SUBSCRIBE_INFO:" Get E-mail updates about our latest shop and special offers.",
+    SHOP_NOW: "SHOP NOW"
 
 }
 export default AppString
