@@ -42,9 +42,9 @@ function HomeScreen() {
 
                 <div className='flex gap-18 p-1 justify-center'>
 
-
-                    <WordBtn children="New Arrivals" onClick={() => setActiveTab("new")} active={activeTab === "new"} />
-                    <WordBtn children="Best Sellers" onClick={() => setActiveTab("best")} active={activeTab === "best"}/>
+                    <WordBtn children="New Arrivals" onClick={() => setActiveTab("new")} active={activeTab === "new"}/>
+                    <WordBtn children="Best Sellers" onClick={() => setActiveTab("best")}
+                             active={activeTab === "best"}/>
                     <WordBtn children="All Items" onClick={() => setActiveTab("all")} active={activeTab === "all"}/>
 
                 </div>

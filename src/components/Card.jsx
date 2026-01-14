@@ -1,9 +1,9 @@
 import {FaHeart, FaRegEye, FaRegHeart} from "react-icons/fa";
-import {useWishlist} from "../context/WishlistContext.jsx";
+import { useWishlistContext } from "../context/WishlistContext.jsx";
 
 function Card({item}) {
 
-      const { wishlist, toggleWishlist } = useWishlist();
+      const { wishlist, toggleWishlist } = useWishlistContext();
       const liked = wishlist[item.id];
 
     return (

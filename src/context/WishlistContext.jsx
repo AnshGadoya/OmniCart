@@ -19,4 +19,4 @@ export const WishlistProvider = ({ children }) => {
   );
 };
 
-export const useWishlist = () => useContext(WishlistContext);
+export const useWishlistContext = () => useContext(WishlistContext);

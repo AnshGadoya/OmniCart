@@ -26,7 +26,7 @@ export default function ScrollTopBtn() {
           {/* Default arrow */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute h-7 w-7 transition-transform duration-300 group-hover:-translate-y-6"
+            className="absolute h-7 w-7 transition-transform duration-300 group-hover:animate-bounce"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -35,17 +35,7 @@ export default function ScrollTopBtn() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
           </svg>
 
-          {/* Hover arrow */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute h-7 w-7 translate-y-6 transition-transform duration-300 group-hover:translate-y-0"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
-          </svg>
+
         </div>
       </div>
     )
