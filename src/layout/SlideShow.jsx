@@ -2,13 +2,14 @@ import React, {useState} from "react";
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from "react-icons/md";
 import slides from "../utils/const/slide.js";
 import AppString from "../utils/const/AppString.jsx";
+import WordBtn from "../components/WordBtn.jsx";
 
 function SlideShow() {
     const [current, setCurrent] = useState(0);
     const slide = slides[current];
 
     return (
-        <section className="w-full h-[30vh] lg:h-[50vh] bg-[#dffefe] relative overflow-hidden">
+        <section className="w-full h-[40vh] lg:h-[50vh] bg-[#dffefe] relative overflow-hidden">
 
             {/* Content */}
             <div className="max-w-7xl mx-auto h-full px-4 md:px-6 flex items-center justify-between">
@@ -26,10 +27,11 @@ function SlideShow() {
                     </h1>
 
 
-                    <button
-                        className="mt-4 md:mt-10 border border-black px-6 md:px-10 py-2 md:py-4 text-xs md:text-sm tracking-widest hover:bg-black hover:text-white transition">
-                        {AppString.SHOP_NOW}
-                    </button>
+                    <WordBtn
+                        className='mt-4 md:mt-10 border border-black px-6 md:px-10 py-2 md:py-4 text-xs md:text-sm tracking-widest hover:bg-black hover:text-white transition'
+                        children={AppString.SHOP_NOW}
+                    />
+
                 </div>
 
                 {/* RIGHT IMAGE */}
