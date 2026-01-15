@@ -7,7 +7,7 @@ function AnimatedBtn({
   type = "button",
 }) {
 
-    // console.log("sddsfdf",AppColors.purple)
+
 
   return (
     <button
