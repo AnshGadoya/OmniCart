@@ -1,29 +1,29 @@
 import {FaHeart, FaRegEye, FaRegHeart} from "react-icons/fa";
-import { useWishlistContext } from "../context/WishlistContext.jsx";
+import {useWishlistContext} from "../../context/WishlistContext.jsx";
 
-function Card({item}) {
+function ItemCard({item}) {
 
       const { wishlist, toggleWishlist } = useWishlistContext();
       const liked = wishlist[item.id];
 
     return (
-        <div className="w-72 bg-white rounded-xl overflow-hidden shadow-md group">
+        <div className="w-full  sm:w-72 bg-white rounded-xl overflow-hidden shadow-md group">
 
             {/* IMAGE CONTAINER */}
             <div className="relative overflow-hidden">
 
                 {/* DEFAULT IMAGE */}
                 <img
-                    src="https://img.freepik.com/free-photo/attractive-girl-looking-fun-portrait-slender-caucasian-female-trendy-sweater-holding-hands-head-smiling-broadly-posing-camera-being-good-mood_176420-13719.jpg?semt=ais_hybrid&w=740&q=80"
+                    src={item.prev_image}
                     alt="product"
-                    className="w-full h-80 object-cover transition-all duration-500 group-hover:opacity-0 group-hover:scale-105"
+                    className="w-full h-64 sm:h-72 md:h-80 object-cover transition-all duration-500 group-hover:opacity-0 group-hover:scale-105"
                 />
 
                 {/* HOVER IMAGE */}
                 <img
-                    src="https://media.gettyimages.com/id/2252729390/video/paris-france-diane-batoukina-wears-light-brown-hair-tucked-under-a-ribbed-beige-knit-beanie.jpg?s=640x640&k=20&c=u9xzx8JU06xQAvHh68PE6HmsUUiMRyg3W84ZGc-0iTI="
+                    src={item.hover_image}
                     alt="product-hover"
-                    className="absolute inset-0 w-full h-80 object-cover opacity-0 scale-110 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100"
+                    className="absolute inset-0 w-full h-64 sm:h-72 md:h-80 object-cover opacity-0 scale-110 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100"
                 />
 
                 {/* BADGES */}
@@ -34,18 +34,18 @@ function Card({item}) {
 
                 {/* ACTION BAR */}
                 <div
-                    className="absolute bottom-0 left-0 w-full h-14 bg-purple-500 flex
-                    translate-y-full group-hover:translate-y-0
-                    transition-transform duration-500 overflow-hidden">
+                    className="absolute bottom-0 left-0 w-full h-14
+                   bg-purple-500 flex overflow-hidden
+                    md:translate-y-full md:group-hover:translate-y-0 md:transition-transform md:duration-500d">
 
                     {/* BUTTON 1 */}
                     <button
                       className="
                         w-14 flex items-center justify-center text-white
-                      transform translate-y-4 opacity-0
-                      group-hover:translate-y-0 group-hover:opacity-100
-                      transition-all duration-300 delay-100
-                      hover:bg-white hover:text-purple-600
+                       md:translate-y-4 md:opacity-0
+                       md:group-hover:translate-y-0 md:group-hover:opacity-100
+                       md:transition-all md:duration-300 md:delay-100
+                       hover:bg-white hover:text-purple-600
                       "
                       onClick={() => toggleWishlist(item.id)}
                     >
@@ -62,13 +62,13 @@ function Card({item}) {
                    <button
                       className="
                        flex-1 flex items-center justify-center gap-2
-                      text-white border-l border-r border-purple-300
-                      transform translate-y-4 opacity-0
-                      group-hover:translate-y-0 group-hover:opacity-100
-                      transition-all duration-300 delay-200
+                       text-white font-medium
+                       border-l border-r border-purple-300
+                       md:translate-y-4 md:opacity-0
+                       md:group-hover:translate-y-0 md:group-hover:opacity-100
+                       md:transition-all md:duration-300 md:delay-200
                       hover:bg-white hover:text-purple-600
-                      font-medium
-                      "
+                       text-sm sm:text-base"
                     >
                       Add to Cart
                    </button>
@@ -78,10 +78,10 @@ function Card({item}) {
                    <button
                       className="
                         w-14 flex items-center justify-center text-white
-                          transform translate-y-4 opacity-0
-                          group-hover:translate-y-0 group-hover:opacity-100
-                          transition-all duration-300 delay-300
-                          hover:bg-white hover:text-purple-600
+                        md:translate-y-4 md:opacity-0
+                        md:group-hover:translate-y-0 md:group-hover:opacity-100
+                        md:transition-all md:duration-300 md:delay-300
+                        hover:bg-white hover:text-purple-600
                       "
                     >
                       <FaRegEye />
@@ -91,8 +91,8 @@ function Card({item}) {
             </div>
 
             {/* CONTENT */}
-            <div className="p-4 text-center">
-                <h3 className="text-lg font-medium">Lorem ipsum jacket</h3>
+            <div className="p-3 sm:p-4 text-center">
+                <h3 className="text-base sm:text-lg font-medium">Lorem ipsum jacket</h3>
 
                 {/* RATING */}
                 <div className="flex justify-center gap-1 text-yellow-400 my-2">
@@ -110,4 +110,4 @@ function Card({item}) {
     )
 }
 
-export default Card
+export default ItemCard

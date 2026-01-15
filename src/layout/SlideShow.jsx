@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from "react-icons/md";
 import slides from "../utils/const/slide.js";
 import AppString from "../utils/const/AppString.jsx";
-import WordBtn from "../components/WordBtn.jsx";
+import WordBtn from "../components/Button/WordBtn.jsx";
+import AnimatedBtn from "../components/Button/AnimatedBtn.jsx";
 
 function SlideShow() {
     const [current, setCurrent] = useState(0);
@@ -26,11 +27,7 @@ function SlideShow() {
                         {slide.title2}
                     </h1>
 
-
-                    <WordBtn
-                        className='mt-4 md:mt-10 border border-black px-6 md:px-10 py-2 md:py-4 text-xs md:text-sm tracking-widest hover:bg-black hover:text-white transition'
-                        children={AppString.SHOP_NOW}
-                    />
+                <AnimatedBtn children={AppString.SHOP_NOW}/>
 
                 </div>
 

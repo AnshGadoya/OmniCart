@@ -9,6 +9,7 @@ const AppColors = {
     lightgray: "#565a60",
     text: "#212121",
     white: "#FFFFFF",
+    purple:"#A749FF",
 };
 
 export default AppColors;

@@ -40,7 +40,7 @@ function Header() {
         >
             <div
                 className=
-                    ' h-full bg-white flex justify-around items-center
+                    ' h-full  bg-white flex justify-around items-center
           transition-all duration-300 ease-in-out
           ${scrolled ? "py-2" : "py-6"}
         '
@@ -59,9 +59,9 @@ function Header() {
                 {/* Search bar */}
                 <div
                     className='
-            bg-gray-200 w-2/4 rounded-2xl flex items-center px-4 shadow-md font-medium
-            transition-all duration-300
-            ${scrolled ? "py-1" : "py-2"}
+                    bg-gray-200 w-2/4 rounded-2xl flex items-center px-4 shadow-md font-medium
+                    transition-all duration-300
+                    ${scrolled ? "py-1" : "py-2"}
           '
                 >
                     <FaSearch/>
