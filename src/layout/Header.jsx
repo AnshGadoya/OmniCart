@@ -10,14 +10,20 @@ import CartDrawer from "../components/CartDrawer.jsx";
 function Header() {
     const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
+    useEffect(() => {
+        const scrollContainer = document.getElementById("main-scroll");
 
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
+        const onScroll = () => {
+            setScrolled(scrollContainer.scrollTop > 0);
+        };
+
+        scrollContainer.addEventListener("scroll", onScroll);
+
+        return () => {
+            scrollContainer.removeEventListener("scroll", onScroll);
+        };
     }, []);
+
     const [openCart, setOpenCart] = useState(false);
 
     useEffect(() => {
@@ -31,6 +37,7 @@ function Header() {
             document.body.style.overflow = "auto";
         };
     }, [openCart]);
+
     return (
         <header
             className={`shadow-md 
@@ -39,18 +46,15 @@ function Header() {
       `}
         >
             <div
-                className=
-                    ' h-full  bg-white flex justify-around items-center
-          transition-all duration-300 ease-in-out
-          ${scrolled ? "py-2" : "py-6"}
-        '
+                className={`h-full  bg-white flex justify-around items-center
+                  transition-all duration-300 ease-in-out mx-1
+                  ${scrolled ? "py-2" : "py-6"}`}
             >
                 {/* Logo */}
                 <div>
                     <h1
-                        className={`font-bold text-gray-800 transition-all duration-300
-              ${scrolled ? "text-2xl" : "text-3xl"}`}
-
+                        className={`font-bold text-gray-800 transition-all duration-300 
+                         ${scrolled ? "text-2xl" : "text-3xl"}`}
                     >
                         {AppString.APP_NAME}
                     </h1>
@@ -58,7 +62,7 @@ function Header() {
 
                 {/* Search bar */}
                 <div
-                    className='
+                    className=' mx-2
                     bg-gray-200 w-2/4 rounded-2xl flex items-center px-4 shadow-md font-medium
                     transition-all duration-300
                     ${scrolled ? "py-1" : "py-2"}
