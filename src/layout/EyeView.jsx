@@ -6,9 +6,10 @@ function EyeView({open, item, onClose}) {
     if (!open || !item) return null;
 
     return (
-        <>
+
+<>
             {/* Overlay */}
-            <div className="fixed inset-0 bg-black/40 z-110" onClick={onClose}/>
+            <div className="fixed inset-0 bg-black/40 z-40" onClick={onClose}/>
 
             {/* Modal */}
             <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
@@ -27,7 +28,7 @@ function EyeView({open, item, onClose}) {
                         {/* LEFT */}
                         <div className="flex flex-col h-full">
                             <div className="bg-gray-100 rounded-xl flex justify-center items-center h-[70%]">
-                                <img src={item.prev_image} className="h-full object-contain rounded-xl"/>
+                                <img src={item.hover_image} className="h-full object-contain rounded-xl"/>
                             </div>
 
                             <div className="flex gap-4 mt-5">

@@ -8,7 +8,7 @@ function LayoutHF({ children }) {
     <div className="min-h-screen flex flex-col">
 
       {/* Header */}
-      <header className="sticky top-0 z-999">
+      <header className="sticky top-0 z-100">
         <Header />
       </header>
 

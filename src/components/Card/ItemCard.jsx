@@ -1,7 +1,7 @@
 import {FaHeart, FaRegEye, FaRegHeart} from "react-icons/fa";
 import {useWishlistContext} from "../../context/WishlistContext.jsx";
 
-function ItemCard({item}) {
+function ItemCard({item, onEyeClick}) {
 
       const { wishlist, toggleWishlist } = useWishlistContext();
       const liked = wishlist[item.id];
@@ -83,6 +83,7 @@ function ItemCard({item}) {
                         md:transition-all md:duration-300 md:delay-300
                         hover:bg-white hover:text-purple-600
                       "
+                       onClick={onEyeClick}
                     >
                       <FaRegEye />
                    </button>
