@@ -27,7 +27,7 @@ function SlideShow() {
                         {slide.title2}
                     </h1>
 
-                <AnimatedBtn children={AppString.SHOP_NOW}/>
+                <AnimatedBtn className='mt-2' children={AppString.SHOP_NOW}/>
 
                 </div>
 

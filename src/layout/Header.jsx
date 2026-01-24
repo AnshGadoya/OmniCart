@@ -27,16 +27,16 @@ function Header() {
     const [openCart, setOpenCart] = useState(false);
 
     useEffect(() => {
-        if (openCart) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "auto";
-        }
+        const scrollContainer = document.getElementById("main-scroll");
+        if (!scrollContainer) return;
+
+        scrollContainer.style.overflow = openCart ? "hidden" : "scroll";
 
         return () => {
-            document.body.style.overflow = "auto";
+            scrollContainer.style.overflow = "scroll";
         };
     }, [openCart]);
+
 
     return (
         <header
@@ -47,7 +47,7 @@ function Header() {
         >
             <div
                 className={`h-full  bg-white flex justify-around items-center
-                  transition-all duration-300 ease-in-out mx-1
+                  transition-all duration-300 ease-in-out
                   ${scrolled ? "py-2" : "py-6"}`}
             >
                 {/* Logo */}

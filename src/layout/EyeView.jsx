@@ -1,5 +1,6 @@
 import { FaHeart, FaExchangeAlt } from "react-icons/fa";
 import { useState } from "react";
+import FillBtn from "../components/Button/FillBtn.jsx";
 
 function EyeView({ open, item, onClose }) {
   const [qty, setQty] = useState(1);
@@ -15,7 +16,7 @@ function EyeView({ open, item, onClose }) {
       />
 
       {/* Modal Wrapper */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center px-3 sm:px-6">
+      <div className="fixed inset-0 z-110 flex items-center justify-center px-3 sm:px-6">
         <div
           className="
             bg-white rounded-xl
@@ -31,7 +32,7 @@ function EyeView({ open, item, onClose }) {
           <button
             onClick={onClose}
             className="absolute top-4 sm:top-6 right-4 sm:right-6
-                       text-2xl text-gray-500 hover:text-black"
+                       text-2xl text-gray-500 hover:text-black cursor-pointer"
           >
             ×
           </button>
@@ -57,7 +58,7 @@ function EyeView({ open, item, onClose }) {
                 <img
                   src={item.hover_image}
                   alt={item.title}
-                  className="max-h-full object-contain rounded-xl"
+                  className="h-full w-full object-cover rounded-xl"
                 />
               </div>
 
@@ -76,7 +77,7 @@ function EyeView({ open, item, onClose }) {
                     <img
                       src={item.hover_image}
                       alt="thumb"
-                      className="h-full w-full object-contain rounded-lg"
+                      className="h-full w-full object-cover rounded-lg"
                     />
                   </div>
                 ))}
@@ -84,7 +85,7 @@ function EyeView({ open, item, onClose }) {
             </div>
 
             {/* RIGHT - Product Info */}
-            <div className="flex flex-col">
+            <div className="flex flex-col h-full">
               <h2 className="text-xl sm:text-2xl font-semibold">
                 {item.title}
               </h2>
@@ -107,44 +108,39 @@ function EyeView({ open, item, onClose }) {
                   "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."}
               </p>
 
-              <hr className="my-5" />
+                {/*  BOTTOM SECTION */}
+                <div className='mt-auto'>
+                    <hr className="my-5"/>
 
-              {/* Actions */}
-              <div className="flex flex-wrap items-center gap-3">
-                {/* Quantity */}
-                <div className="flex border rounded-xl">
-                  <button
-                    className="px-3 py-2"
-                    onClick={() => setQty((q) => Math.max(1, q - 1))}
-                  >
-                    −
-                  </button>
-                  <div className="px-4 py-2">{qty}</div>
-                  <button
-                    className="px-3 py-2"
-                    onClick={() => setQty((q) => q + 1)}
-                  >
-                    +
-                  </button>
+                    {/* Actions */}
+                    <div className="flex flex-wrap items-center gap-3 ">
+                        {/* Quantity */}
+                        <div className="flex border rounded-xl">
+                            <button
+                                className="px-3 py-2 cursor-pointer"
+                                onClick={() => setQty((q) => Math.max(1, q - 1))}
+                            >
+                                −
+                            </button>
+                            <div className="px-4 py-2">{qty}</div>
+                            <button
+                                className="px-3 py-2 cursor-pointer"
+                                onClick={() => setQty((q) => q + 1)}
+                            >
+                                +
+                            </button>
+                        </div>
+
+                        {/* Add to Cart */}
+                        <FillBtn>
+                            ADD TO CART
+                        </FillBtn>
+
+                        {/* Icons */}
+                        <FaHeart className="text-gray-500 hover:text-red-500 cursor-pointer text-xl"/>
+                        <FaExchangeAlt className="text-gray-500 cursor-pointer text-xl"/>
+                    </div>
                 </div>
-
-                {/* Add to Cart */}
-                <button
-                  className="
-                    bg-gray-900 text-white
-                    px-6 sm:px-10 py-3
-                    font-medium rounded-xl
-                    hover:bg-black
-                    w-full sm:w-auto
-                  "
-                >
-                  ADD TO CART
-                </button>
-
-                {/* Icons */}
-                <FaHeart className="text-gray-500 hover:text-red-500 cursor-pointer text-xl" />
-                <FaExchangeAlt className="text-gray-500 cursor-pointer text-xl" />
-              </div>
             </div>
           </div>
         </div>

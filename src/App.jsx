@@ -11,7 +11,7 @@ const App = () => {
             id="main-scroll"
             className='h-screen overflow-y-scroll no-scrollbar'>
             <Routes>
-                <Route element={ <LayoutHF children={ <HomeScreen/>}/> } path="/" />
+                <Route element={ <LayoutHF  children={ <HomeScreen/>}/> } path="/" />
             </Routes>
 
         </div>
